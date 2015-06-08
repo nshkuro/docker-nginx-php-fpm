@@ -23,9 +23,10 @@ RUN mkdir -p /var/run/php5-fpm
 
 ADD conf/supervisor/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 ADD conf/php/php.ini /etc/php5/fpm/conf.d/40-custom.ini
+ADD sites/default.vhost /etc/nginx/sites-enabled/default.vhost
 
 # expose volumes
-VOLUME ["/var/www", "/etc/nginx/sites-enabled"]
+VOLUME ["/var/www"]
 
 EXPOSE 80 443 9000
 

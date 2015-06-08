@@ -4,5 +4,4 @@ web:
     - "80:80"
     - "443:443"
   volumes:
-    - www:/var/www
-    - sites:/etc/nginx/sites-enabled
+    - www:/var/www    
